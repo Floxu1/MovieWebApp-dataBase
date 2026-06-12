@@ -1,6 +1,6 @@
-# MovieJavan Web
+# Movie Web App database
 
-نسخه وب برنامه دسکتاپ MovieJavan.
+نسخه وب برنامه دسکتاپ  Movie Web App.
 
 ## اجرا
 
