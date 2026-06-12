@@ -1,4 +1,4 @@
-# Movie Web App database
+# Movie Web App sample (Educational)
 <img width="2543" height="1265" alt="image" src="https://github.com/user-attachments/assets/b1c7fd23-0859-4b56-a02f-0dbeec6aaac1" />
 
 نسخه وب برنامه دسکتاپ  Movie Web App.
