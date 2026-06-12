@@ -5,7 +5,7 @@
 ## اجرا
 
 ```powershell
-cd "C:\Users\Rayaneh Pardaz\AppData\Roaming\MovieJavan\new\webapp"
+cd "folderpath"
 npm start
 ```
 
