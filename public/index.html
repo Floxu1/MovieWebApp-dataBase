@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieJavan Web</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="auth-panel" aria-label="ورود و ثبت نام">
+        <button id="closeAuthPanel" class="panel-toggle panel-close" type="button" aria-label="بستن پنل ورود">×</button>
+        <div class="brand">
+          <div class="mark">MJ</div>
+          <div>
+            <h1>MovieJavan</h1>
+            <p id="serverLabel">در حال اتصال...</p>
+          </div>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="login" type="button">ورود</button>
+          <button class="tab" data-tab="signup" type="button">ثبت نام</button>
+          <button class="tab" data-tab="forgot" type="button">بازیابی</button>
+        </div>
+
+        <form id="loginForm" class="form active">
+          <label>
+            ایمیل
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            رمز عبور
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary" type="submit">ورود به حساب</button>
+        </form>
+
+        <form id="signupForm" class="form">
+          <label>
+            نام
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            ایمیل
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            شماره تماس
+            <input name="phone" type="tel" autocomplete="tel" />
+          </label>
+          <label>
+            رمز عبور
+            <input name="password" type="password" autocomplete="new-password" required />
+          </label>
+          <button class="primary" type="submit">ساخت حساب</button>
+        </form>
+
+        <form id="forgotForm" class="form">
+          <label>
+            ایمیل
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <button class="primary" type="submit">ارسال لینک بازیابی</button>
+        </form>
+
+        <p id="status" class="status" role="status"></p>
+      </section>
+
+      <section class="workspace" aria-label="محتوای برنامه">
+        <button id="openAuthPanel" class="panel-toggle panel-open" type="button" hidden>ورود</button>
+        <div class="toolbar">
+          <div>
+            <strong id="userName">کاربر وارد نشده</strong>
+            <span id="subscription">وضعیت اشتراک نامشخص</span>
+          </div>
+          <div class="actions">
+            <button id="devicesButton" type="button" disabled>دستگاه‌ها</button>
+            <button id="logsButton" type="button">Logs</button>
+            <a id="openPlaystore" class="button-link" href="#" target="_blank" rel="noreferrer">باز کردن برنامه</a>
+          </div>
+        </div>
+
+        <iframe id="playstoreFrame" title="MovieJavan Playstore"></iframe>
+
+        <div id="deviceDrawer" class="drawer" hidden>
+          <div class="drawer-head">
+            <h2>دستگاه‌های فعال</h2>
+            <button id="closeDevices" type="button">بستن</button>
+          </div>
+          <div id="deviceList" class="device-list"></div>
+        </div>
+
+        <div id="logDrawer" class="drawer log-drawer" hidden>
+          <div class="drawer-head">
+            <h2>Proxy Logs</h2>
+            <div class="drawer-actions">
+              <button id="refreshLogs" type="button">Refresh</button>
+              <button id="copyLogs" type="button">Copy</button>
+              <button id="clearLogs" type="button">Clear</button>
+              <button id="closeLogs" type="button">Close</button>
+            </div>
+          </div>
+          <pre id="logOutput" class="log-output"></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
