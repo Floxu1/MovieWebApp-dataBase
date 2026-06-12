@@ -3,6 +3,10 @@
 
 نسخه وب برنامه دسکتاپ  Movie Web App.
 
+[کانال تلگرام](https://t.me/UacSniSpoofer): `t.me/UacSniSpoofer`
+
+
+
 ## اجرا
 
 ```powershell
